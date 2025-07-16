@@ -1,5 +1,5 @@
 import bootstrap from "./bootstrap.js";
-import server from "./server/server.js";
+import { startWatcher } from "./server/watcher.js";
 
-server()
+startWatcher()
 bootstrap()
