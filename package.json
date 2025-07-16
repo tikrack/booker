@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "deno --allow-all core/cli.js --dev",
+    "build": "deno --allow-all core/cli.js --build"
   },
   "devDependencies": {
     "vite": "^7.0.4"
+  },
+  "dependencies": {
+    "showdown": "^2.1.0"
   }
 }
