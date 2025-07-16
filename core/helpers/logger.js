@@ -7,9 +7,9 @@ const COLORS = {
     debug: "\x1b[35m",
 };
 
-const log = (message, level) => {
-    const now = new Date();
-    const color = COLORS[level] ?? COLORS.info;
+const log = (message, level = "info") => {
+    const now = new Date().toLocaleTimeString();
+    const color = COLORS[level];
     const label = level.toUpperCase().padEnd(7);
     console.log(`${color}[${label}] ${now} › ${message}${RESET}`);
 };
