@@ -1,5 +1,3 @@
-import Parser from "./parser/parser.js";
+import bootstrap from "./bootstrap.js";
 
-const parser = new Parser()
-
-parser.config()
+bootstrap()
