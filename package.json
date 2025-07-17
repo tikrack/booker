@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "deno --allow-all core/cli.js --dev",
+    "dev": "deno --allow-all --watch core/cli.js --dev",
     "build": "deno --allow-all core/cli.js --build"
   },
   "devDependencies": {
