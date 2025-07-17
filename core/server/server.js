@@ -1,6 +1,6 @@
 import config from "../parser/config.js";
 import logger from "../helpers/logger.js";
-import content from "../parser/content.js";
+import content, {setContent, setLanguage, setTitle} from "../parser/content.js";
 
 const startServer = async () => {
     const settings = await config();
@@ -13,6 +13,9 @@ const startServer = async () => {
             headers: {"content-type": "text/html; charset=utf-8"},
         });
     });
+
+    setLanguage(settings.language);
+    setTitle(settings.title);
 };
 
 export default startServer;
